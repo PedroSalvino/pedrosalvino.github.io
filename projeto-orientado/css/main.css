@@ -1,0 +1,227 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+/* Resetando e estilizando padrões */
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: "Open Sans";
+    font-size: 1.2rem;
+    background-color: rgb(252,252,252);
+    color: #eee;
+}
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+img{
+    max-width: 100%;
+}
+/* formatando TEXTO */
+h1{
+    display: none;
+}
+h2, h3{
+    margin-bottom: 12px;
+    text-align: center;
+    font-size: 2rem;
+}
+.texto-claro{
+    color: #E5D6C1;
+}
+.texto-escuro, label, legend, .cartao{
+    color: #63320D;
+}
+.titulo{
+    font-weight: bold;
+    text-align: center;
+}
+/* Definindo cor de fundo das seções*/
+header, footer{
+    background-color: #63320D;
+}
+main>div{
+    background-color: #FCE5AE;
+    background-image: url(../img/pattern-1.png);
+}
+main>section:nth-child(even){
+    background-color: #824614;
+}
+main>section:nth-child(odd), .cartao{
+    background-color: #E5D6C1;
+}
+/* formatando área de cartão */
+.cartao{
+    padding: 10px;
+    border-radius: 15px;
+    box-shadow: 0 0 0.4em rgba(0,0,0,0.5);
+}
+/* Trabalhando no HEADER */
+header, header ul{
+    display: flex;
+}
+header{
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    position: sticky;
+    top: 0;
+    padding: 12px 0px;
+}
+header ul>li{
+    margin: 0px 10px;
+}
+ul a{
+    padding: 10px 15px;
+    color: #E5D6C1;
+    font-weight: bold;
+    font-size: 1.3rem;
+}
+header ul a:hover{
+    color: #EF3743;
+}
+header img{
+    margin-left: 8px;
+}
+/* Trabalhando no MAIN */
+.espaco-linha{
+    color: transparent;
+}
+#inicio>img{
+    margin-top: 15px;
+}
+main>section, main>div{
+    padding: 20px 0;
+}
+#contato>.area-flex>div:nth-child(2){
+    margin-right: 20px;
+}
+/* Padronizando uma área de flexbox genérica */
+.area-flex{
+    display: flex;
+    align-items: center;
+}
+.wrap{
+    flex-wrap: wrap;
+}
+.area-flex, .area-form{
+    margin: 0 auto;
+    max-width: 1000px;
+}
+.area-flex>div{
+    flex: 1 1 200px;
+    margin: 0px 5px;
+}
+.area-flex~div>p{
+    text-align: center;
+    margin: 0;
+    padding: 15px 0;
+    border-top: solid 2px rgba(130,70,20,0.5);
+}
+/* trabalhando no FOOTER*/
+footer{
+    padding-top: 20px;
+}
+footer nav, footer div>div{
+    margin: 0 10px;
+}
+footer ul a{
+    font-weight: normal;
+}
+footer ul a:hover{
+    font-weight: bold;
+}
+footer>div:first-child{
+    max-width: 95%;
+}
+footer nav, footer div>div:nth-child(3){
+    flex: 1 1 200px;
+}
+footer div>div:nth-child(2){
+    flex: 2 2 200px;
+}
+footer h2{
+    font-size: 1.5rem;
+}
+address{
+    font-style: normal;
+}
+/* Trabalhando com FORMULÁRIOS */
+.area-form{
+    margin-bottom: 20px;
+}
+.dados-flex{
+    display: flex;
+    justify-content: space-around;
+}
+.dados-flex>.dado-form{
+    flex: 1 1 300px;
+    margin: 0 auto;
+}
+.dado-form>label{
+    font-size: 1.2rem;
+}
+.dado-form>input, .dado-form>div, textarea, select{
+    display: block;
+    width: 90%;
+    margin: 5px auto;
+    padding: 12px 8px;
+    font-size: 1.2rem;
+    border: solid 3px rgba(90,50,13,0.5);
+    border-radius: 10px;
+}
+textarea{
+    resize: none;
+}
+fieldset, button{
+    border: 0;
+}
+fieldset{
+    margin: 15px 0px;
+}
+legend{
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 15px; 
+}
+button{
+    color: #eee;
+    font-size: 1.2rem;
+}
+button:hover{
+    box-shadow: 0 0 0.4em rgba(1,1,1,1);
+}
+input[type="file"]{
+    color: #000;
+}
+input[type="checkbox"]{
+    display: none;
+}
+/* Padronizando botões */
+.link-botao, button{
+    display: block;
+    margin: 15px auto 0 auto;
+    padding: 10px 20px;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 12px;
+    width: 50%;
+}
+/* Estilizando botoes */
+.botao-escuro{
+    background-color: #824614;
+    color: #FFF;
+}
+.botao-claro{
+    background-color: #FCE5AE;
+    color: #63320D;
+}
+.botao-escuro:hover, .botao-claro:hover{
+    background-color: #EF3743;
+}
+.botao-claro:hover{
+    color: #FFF;
+}
