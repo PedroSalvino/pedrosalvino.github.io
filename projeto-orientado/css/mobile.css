@@ -7,11 +7,7 @@
         display: block;
         margin: 10px 0px;
     }
-<<<<<<< HEAD
     header .icon {
-=======
-    header #control-nav {
->>>>>>> a28f7e80320742bede969e5bb80f499b24c1afe7
         position: absolute;
         right: 20px;
         top: 20px;
@@ -23,21 +19,13 @@
         z-index: 2;
         cursor: pointer;
     }
-<<<<<<< HEAD
     header .icon:before {
-=======
-    header #control-nav:before {
->>>>>>> a28f7e80320742bede969e5bb80f499b24c1afe7
         content: "";
         display: block;
         height: 3px;
         background: #E5D6C1;
     }
-<<<<<<< HEAD
    /* header #control-nav-close {
-=======
-    header #control-nav-close {
->>>>>>> a28f7e80320742bede969e5bb80f499b24c1afe7
         position: fixed;
         right: 0;
         top: 0;
@@ -68,21 +56,12 @@
         -ms-transform: translate(100%, 0);
         transform: translate(100%, 0);
     }
-<<<<<<< HEAD
     /*#control:checked ~ #control-nav-close {
         -webkit-transform: translate(0, 0);
         -ms-transform: translate(0, 0);
         transform: translate(0, 0);
     }*/
     .responsive {
-=======
-    #control:checked ~ #control-nav-close {
-        -webkit-transform: translate(0, 0);
-        -ms-transform: translate(0, 0);
-        transform: translate(0, 0);
-    }
-    #control:checked ~ nav {
->>>>>>> a28f7e80320742bede969e5bb80f499b24c1afe7
         -webkit-transform: translate(0, 0);
         -ms-transform: translate(0, 0);
         transform: translate(0, 0);
