@@ -14,17 +14,17 @@
         display: block;
         width: 30px;
         padding: 5px 0;
-        border: solid #E5D6C1;
-        border-width: 3px 0;
+        /*border: solid #E5D6C1;
+        border-width: 3px 0;*/
         z-index: 2;
         cursor: pointer;
     }
-    header .icon:before {
+    /*header .icon:before {
         content: "";
         display: block;
         height: 3px;
         background: #E5D6C1;
-    }
+    }*/
    /* header #control-nav-close {
         position: fixed;
         right: 0;
