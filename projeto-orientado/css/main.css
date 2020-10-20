@@ -237,3 +237,6 @@ td{
 thead{
     background-color: #824614;
 }
+.icon{
+    display: none;
+}

@@ -7,7 +7,7 @@
         display: block;
         margin: 10px 0px;
     }
-    header #control-nav {
+    header .icon {
         position: absolute;
         right: 20px;
         top: 20px;
@@ -19,13 +19,13 @@
         z-index: 2;
         cursor: pointer;
     }
-    header #control-nav:before {
+    header .icon:before {
         content: "";
         display: block;
         height: 3px;
         background: #E5D6C1;
     }
-    header #control-nav-close {
+   /* header #control-nav-close {
         position: fixed;
         right: 0;
         top: 0;
@@ -39,7 +39,7 @@
         -webkit-transform: translate(100%, 0);
         -ms-transform: translate(100%, 0);
         transform: translate(100%, 0);
-    }
+    }*/
     header nav{
         position: fixed;
         top: 0;
@@ -56,12 +56,12 @@
         -ms-transform: translate(100%, 0);
         transform: translate(100%, 0);
     }
-    #control:checked ~ #control-nav-close {
+    /*#control:checked ~ #control-nav-close {
         -webkit-transform: translate(0, 0);
         -ms-transform: translate(0, 0);
         transform: translate(0, 0);
-    }
-    #control:checked ~ nav {
+    }*/
+    .responsive {
         -webkit-transform: translate(0, 0);
         -ms-transform: translate(0, 0);
         transform: translate(0, 0);
