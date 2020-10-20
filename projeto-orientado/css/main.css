@@ -35,6 +35,9 @@ h2, h3{
 .texto-escuro, label, legend, .cartao{
     color: #63320D;
 }
+.texto-centro{
+    text-align: center;
+}
 .titulo{
     font-weight: bold;
     text-align: center;
@@ -224,4 +227,13 @@ input[type="checkbox"]{
 }
 .botao-claro:hover{
     color: #FFF;
+}
+table{
+   border: solid 2px #824614; 
+}
+td{
+    border-top: solid 2px #824614;
+}
+thead{
+    background-color: #824614;
 }
