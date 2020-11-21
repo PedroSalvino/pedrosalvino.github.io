@@ -5,8 +5,12 @@
 	<!-- Link do arquivo Bootstrap -->
 	<link rel="stylesheet" href="css/bootstrap.css">
 	<link rel="stylesheet" href="css/main.css">
+	<script src="js/jquery.min.js"></script>
 	<script src="js/bootstrap.js"></script>
+	<script src="js/main.js"></script>
 	<title>Página Inicial</title>
+	<script>
+	</script>
 </head>
 <body>
 	<header>
@@ -32,35 +36,41 @@
 				<div class="row">
 					<div class="col">
 						<!-- Filme 1 -->
-						<div class="card bg-dark">
-							<img src="https://dummyimage.com/600x400/b01116/000" class="card-img">
-							<div class="card-img-overlay">
-								<br>
-								<p class="card-title text-white text-center">Nome do Filme</p>
+						<a href="#" data-toggle="modal" data-target="#filmeModal" id="filme1" onclick="dadosModal('https://cors-anywhere.herokuapp.com/https://www.adorocinema.com/filmes/filme-143692/');">
+							<div class="card bg-dark">
+								<img src="https://dummyimage.com/600x400/b01116/000" class="card-img" id="foto1">
+								<div class="card-img-overlay">
+									<br>
+									<p class="card-title text-white text-center" id="titulo1"></p>
+								</div>
 							</div>
-						</div>
+						</a>
 					</div>
 					<!--  -->
 					<div class="col">
 						<!-- Filme 2 -->
-						<div class="card bg-dark">
-							<img src="https://dummyimage.com/600x400/b01116/000" class="card-img">
-							<div class="card-img-overlay">
-								<br>
-								<p class="card-title text-white text-center">Nome do Filme</p>
+						<a href="#" data-toggle="modal" data-target="#filmeModal" id="filme2" onclick="dadosModal('https://cors-anywhere.herokuapp.com/https://www.adorocinema.com/filmes/filme-114782/');">
+							<div class="card bg-dark">
+								<img src="https://dummyimage.com/600x400/b01116/000" class="card-img" id="foto2">
+								<div class="card-img-overlay">
+									<br>
+									<p class="card-title text-white text-center" id="titulo2"></p>
+								</div>
 							</div>
-						</div>
+						</a>
 					</div>
 					<!--  -->
 					<div class="col">
 						<!-- Filme 3 -->
-						<div class="card bg-dark">
-							<img src="https://dummyimage.com/600x400/b01116/000" class="card-img">
-							<div class="card-img-overlay">
-								<br>
-								<p class="card-title text-white text-center">Nome do Filme</p>
-							</div>
-						</div>
+						<a href="#" data-toggle="modal" data-target="#filmeModal" id="filme3" onclick="dadosModal('https://cors-anywhere.herokuapp.com/https://www.adorocinema.com/filmes/filme-130440/');">
+							<div class="card bg-dark">
+								<img src="https://dummyimage.com/600x400/b01116/000" class="card-img">
+								<div class="card-img-overlay">
+									<br>
+									<p class="card-title text-white text-center">Nome do Filme</p>
+								</div>
+							</div>	
+						</a>
 					</div>
 				</div>
 				<br>
@@ -68,35 +78,41 @@
 				<div class="row">
 					<div class="col">
 						<!-- Filme 4 -->
-						<div class="card bg-dark">
-							<img src="https://dummyimage.com/600x400/b01116/000" class="card-img">
-							<div class="card-img-overlay">
-								<br>
-								<p class="card-title text-white text-center">Nome do Filme</p>
+						<a href="#" data-toggle="modal" data-target="#filmeModal" id="filme4" onclick="dadosModal('https://cors-anywhere.herokuapp.com/https://www.adorocinema.com/filmes/filme-232669/');">
+							<div class="card bg-dark">
+								<img src="https://dummyimage.com/600x400/b01116/000" class="card-img">
+								<div class="card-img-overlay">
+									<br>
+									<p class="card-title text-white text-center">Nome do Filme</p>
+								</div>
 							</div>
-						</div>
+						</a>
 					</div>
 					<!--  -->
 					<div class="col">
 						<!-- Filme 5 -->
-						<div class="card bg-dark">
-							<img src="https://dummyimage.com/600x400/b01116/000" class="card-img">
-							<div class="card-img-overlay">
-								<br>
-								<p class="card-title text-white text-center">Nome do Filme</p>
+						<a href="#" data-toggle="modal" data-target="#filmeModal" id="filme5" onclick="dadosModal('https://cors-anywhere.herokuapp.com/https://www.adorocinema.com/filmes/filme-41245/');">
+							<div class="card bg-dark">
+								<img src="https://dummyimage.com/600x400/b01116/000" class="card-img">
+								<div class="card-img-overlay">
+									<br>
+									<p class="card-title text-white text-center">Nome do Filme</p>
+								</div>
 							</div>
-						</div>
+						</a>
 					</div>
 					<!--  -->
 					<div class="col">
 						<!-- Filme 6 -->
-						<div class="card bg-dark">
-							<img src="https://dummyimage.com/600x400/b01116/000" class="card-img">
-							<div class="card-img-overlay">
-								<br>
-								<p class="card-title text-white text-center">Nome do Filme</p>
+						<a href="#" data-toggle="modal" data-target="#filmeModal" id="filme6" onclick="dadosModal('https://cors-anywhere.herokuapp.com/https://www.adorocinema.com/filmes/filme-196666/');">
+							<div class="card bg-dark">
+								<img src="https://dummyimage.com/600x400/b01116/000" class="card-img">
+								<div class="card-img-overlay">
+									<br>
+									<p class="card-title text-white text-center">Nome do Filme</p>
+								</div>
 							</div>
-						</div>
+						</a>
 					</div>
 				</div>
 			</section>
@@ -131,5 +147,60 @@
 	<footer>
 		<p class="text-center text-white">Desenvolvido por &copy; WPK</p>
 	</footer>
+
+	<!-- MODAL -->
+	<div class="modal fade" id="filmeModal" tabindex="-1" role="dialog" aria-labelledby="filmeModalLabel" aria-hidden="true">
+  		<div class="modal-dialog modal-xl" role="document">
+		    <div class="modal-content">
+		      	<div class="modal-header">
+		        	<h5 class="modal-title" id="filmeModalLabel"></h5>
+		        	<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+		          		<span aria-hidden="true">&times;</span>
+		        	</button>
+		      	</div>
+		      	<div class="modal-body">
+		      		<div class="container-fluid">
+		      			<div class="row">
+		      				<!-- Dados do filme -->
+		      				<div class="col-md-6">
+		      					<fieldset>
+		      						<legend>Dados gerais</legend>
+		      						<p class="h4" id="diretorfilme">
+		      						
+		      						</p>
+		      						<p class="h4" id="elencofilme">
+		      						
+		      						</p>
+		      						<p class="h4" id="anofilme">
+		      						
+		      						</p>
+		      						<p class="h4" id="duracaofilme">
+		      						
+		      						</p>
+		      					</fieldset>
+		      				</div>
+		      				<!-- Trailer -->
+		      				<div class="col-md-6">
+		      					<fieldset>
+		      						<legend>Trailer</legend>
+		      						<img src="https://dummyimage.com/640x320/b01116/000">
+		      					</fieldset>
+		      				</div>
+		      			</div>
+		      			<hr>
+		      			<div class="row">
+		      				<div class="col">
+		      					<fieldset>
+		      						<legend>Sinopse</legend>
+		      						<p class="h6" id="sinopsefilme"></p>
+		      					</fieldset>
+		      				</div>
+		      			</div>
+		      		</div>
+		      	</div>
+		  	</div>
+		</div>
+	</div>
+	<!-- FIM MODAL -->
 </body>
 </html>
