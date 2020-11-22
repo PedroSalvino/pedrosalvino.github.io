@@ -13,7 +13,7 @@ function principal(){
 	dadosFilmes('https://cors-anywhere.herokuapp.com/https://www.adorocinema.com/filmes/filme-196666/','https://cors-anywhere.herokuapp.com/https://www.adorocinema.com/filmes/filme-196666/fotos/detalhe/?cmediafile=21047331','titulo6','foto6');
 }
 //*
-function dadosModal(url){
+function dadosModal(url, trailer){
 	fetch(url,{
 		mode: 'cors',
 		headers: {  
@@ -25,32 +25,46 @@ function dadosModal(url){
 	.then(x => {
 			let dom = new DOMParser();
 			let doc = dom.parseFromString(x,"text/html");
-			//* título do filme
-			let modal=document.querySelector("#filmeModal");
+			//*
 			let titulo=document.querySelector("#filmeModalLabel");
 			let diretor=document.querySelector("#diretorfilme");
 			let elenco=document.querySelector("#elencofilme");
 			let ano=document.querySelector("#anofilme");
 			let sinopse=document.querySelector("#sinopsefilme");
-
+			//* título do filme
 			titulo.innerHTML=doc.querySelector(".titlebar-title").innerHTML;
 			//* diretor
-			
 			diretor.innerHTML=doc.querySelector(".meta-body-direction").innerHTML;
 			//*elenco
-			
 			elenco.innerHTML=doc.querySelector(".meta-body-actor").innerHTML;
 			//*ano
-			
 			ano.innerHTML=doc.querySelector(".meta-body-info").innerHTML;
 			//*duração
 			// let duracao=document.querySelector("#duracaofime");
 
 			//*sinopse
-			
 			sinopse.innerHTML=doc.querySelector(".content-txt").innerHTML;
 		}
-	);
+	)
+
+	fetch(trailer,{
+		mode: 'cors',
+		headers: {  
+            "Content-type": "application/x-www-form-urlencoded; charset=UTF-8",
+				"Access-Control-Allow-Origin":"*"
+        }
+	})
+	.then(resp => resp.text())
+	.then(x => {
+			let dom = new DOMParser();
+			let doc = dom.parseFromString(x,"text/html");
+			let areatrailer=document.querySelector('#areatrailer');
+			let dados = {};
+			dados = JSON.parse(doc.querySelector('#btn-export-player').dataset.model).videos;
+			areatrailer.src='http:'+dados[0].sources.medium;
+
+		}
+	)
 }
 //*
 function dadosFilmes(urltexto, urlfoto,idtitulo,idfoto){
