@@ -240,3 +240,14 @@ thead{
 .icon{
     display: none;
 }
+.cor-alerta{
+    color: #f00;
+}
+.texto-legenda{
+    font-size: 1rem;
+    font-weight: bold;
+    margin: 5px 0;
+}
+.borda-alerta{
+    border: solid 3px #f00 !important;
+}

@@ -25,7 +25,6 @@
         <!-- controle do menu responsivo -->
         <div>
             <a href="#" class="icon" onclick="trocarClasse();">
-                <img src="icon/menu.png" alt="ícone de menu">
             </a>
         </div>
     </header>
@@ -39,9 +38,12 @@
         <section>
             <h2>Entre em contato conosco</h2>
             <div class="area-form cartao">
-                <form action="resposta.html" method="post">
+                <div id="campo-erro">
+                </div>
+                <form action="" method="post">
+                    <p class="cor-alerta">* Dados obrigatórios</p>
                     <fieldset>
-                        <legend>Escolha uma opção</legend>
+                        <legend>Escolha uma opção <span class="cor-alerta">*</span></legend>
                         <div class="dados-flex">
                             <div>
                                 <label for="contato-sugestao">Sugestão</label>
@@ -58,18 +60,23 @@
                         </div>
                     </fieldset>
                     <div class="dado-form">
-                        <label for="nome-contato">Digite seu nome</label>
-                        <input type="text" name="nome-contato" id="nome-contato" maxlength="60" required>
+                        <label for="nome-contato">Digite seu nome <span class="cor-alerta">*</span></label>
+                        <input type="text" name="nome-contato" id="nome-contato" maxlength="60" minlength="5" >
                     </div>
                     <div class="dado-form">
-                        <label for="email-contato">Digite seu e-mail</label>
-                        <input type="email" name="email-contato" id="email-contato" maxlength="45" required>
+                        <label for="email-contato">Digite seu e-mail <span class="cor-alerta">*</span></label>
+                        <input type="email" name="email-contato" id="email-contato" maxlength="45" minlength="15" >
                     </div>
                     <div class="dado-form">
-                        <label for="mensagem-contato">Digite sua mensagem</label>
-                        <textarea name="mensagem-contato" id="mensagem-contato" cols="10" rows="5" maxlength="200" required></textarea>
+                        <label for="tel-contato">Digite seu telefone <span class="cor-alerta">*</span><br><span class="texto-legenda">Digite somente números</span></label>
+                        
+                        <input type="tel" name="tel-contato" id="tel-contato" maxlength="11" minlength="10" onkeypress="return somenteNumeros(event);">
                     </div>
-                    <button class="botao-escuro" type="submit">Enviar</button>
+                    <div class="dado-form">
+                        <label for="mensagem-contato">Digite sua mensagem <span class="cor-alerta">*</span></label>
+                        <textarea name="mensagem-contato" id="mensagem-contato" cols="10" rows="5" maxlength="200" minlength="5" ></textarea>
+                    </div>
+                    <button id="" class="botao-escuro" type="button">Enviar</button>
                 </form>
             </div>
         </section>
