@@ -24,7 +24,7 @@ img{
 h1{
     display: none;
 }
-h2, h3{
+h2, h3, caption{
     margin-bottom: 12px;
     text-align: center;
     font-size: 2rem;
@@ -240,14 +240,32 @@ thead{
 .icon{
     display: none;
 }
+
+h3.titulo{
+    font-size: 1.5rem;
+}
 .cor-alerta{
-    color: #f00;
+    color: #EF3743;
 }
-.texto-legenda{
-    font-size: 1rem;
-    font-weight: bold;
-    margin: 5px 0;
+/*ALTO CONTRASTE*/
+.bg-escuro{
+    background-color: #000 !important;
+    color: #fff !important;
+    border: 0 !important;
 }
-.borda-alerta{
-    border: solid 3px #f00 !important;
+.texto-branco{
+    color: #ffffff !important;
+    border: 0 !important;
+}
+.link-contraste{
+    color: #ffffff !important;
+    text-decoration: underline;
+    border: 0 !important;
+}
+.link-contraste:active, .link-contraste:hover{
+    color: #fff333 !important;
+    border: 0 !important;
+}
+.borda-branca{
+    border: solid 3px #fff !important;
 }

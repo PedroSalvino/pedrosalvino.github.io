@@ -20,11 +20,13 @@
                 <li><a href="delivery.html">Delivery</a></li>
                 <li><a href="sobre.html">Sobre</a></li>
                 <li><a href="#inicio">Contato</a></li>
+                <li><a href="#" id="tema">Alto contraste</a></li>
             </ul>
         </nav>
         <!-- controle do menu responsivo -->
         <div>
             <a href="#" class="icon" onclick="trocarClasse();">
+                <img src="icon/menus/menu-grande.png" alt="">
             </a>
         </div>
     </header>
@@ -32,7 +34,7 @@
         <div id="inicio">
             <!-- BANNER DE FUNDO -->
             <div class="area-flex">
-                <img src="img/banner.png" alt="Banner de cor de fundo clara com gotas claras formando um padrão. Contém o logotipo da marca Alô Doçura, com o 'Alô' escrito em cor vibrante e 'doçura' com cor escura. Há uma mensagem abaixo escrita 'Chocolates veganos sem esteriótipos e com a mesma qualidade.'">
+                <img src="img/banner.png" alt="Banner de cor clara contendo o logotipo da marca Alô Doçura.">
             </div>
         </div>
         <section>
@@ -76,7 +78,7 @@
                         <label for="mensagem-contato">Digite sua mensagem <span class="cor-alerta">*</span></label>
                         <textarea name="mensagem-contato" id="mensagem-contato" cols="10" rows="5" maxlength="200" minlength="5" ></textarea>
                     </div>
-                    <button id="" class="botao-escuro" type="button">Enviar</button>
+                    <button id="enviar-contato" class="botao-escuro" type="button" onclick="validarContato();">Enviar</button>
                 </form>
             </div>
         </section>
@@ -100,20 +102,20 @@
             <div>
                 <address>
                     <p>
-                        <img src="icon/pin.png" alt="ícone de um pino de mapa.">
+                        <img src="icon/pin.png" alt="">
                         Rua Sweet Hello, 23 - 110450-023<br>Parque das Abelhas - 
                         Santos / SP
                     </p>
                     <p>
-                        <img src="icon/mail.png" alt="ícone de um envelope aberto exibindo uma folha com um arroba.">
+                        <img src="icon/mail.png" alt="">
                         contato@alodocura.com
                     </p>
                     <p>
-                        <img src="icon/phone.png" alt="ícone de um telefone.">
+                        <img src="icon/phone.png" alt="">
                         (13) 3352-3656
                     </p>
                     <p>
-                        <img src="icon/mobile.png" alt="ícone de um smartphone.">
+                        <img src="icon/mobile.png" alt="">
                         (13) 9 7431-5007
                     </p>
                 </address>
@@ -121,7 +123,7 @@
         </div>
         <div>
             <p>
-                Desenvolvido por <img src="icon/wpk.png" alt="Logotipo da equipe WPK.">
+                Desenvolvido por <img src="icon/wpk.png" alt="">
             </p>
         </div>
     </footer>
