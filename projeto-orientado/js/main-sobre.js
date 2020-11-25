@@ -71,6 +71,9 @@ function principal(){
 			document.querySelectorAll('.cor-alerta').forEach(input =>{
 				input.classList.add('texto-branco');
 			});
+			document.querySelectorAll('.texto-dark').forEach(texto =>{
+				texto.classList.add('texto-branco');
+			});
 			document.querySelectorAll('button').forEach(button =>{
 				button.classList.add('bg-escuro');
 			});
@@ -160,6 +163,9 @@ function principal(){
 			});
 			document.querySelectorAll('button').forEach(button =>{
 				button.classList.remove('link-contraste');
+			});
+			document.querySelectorAll('.texto-dark').forEach(texto =>{
+				texto.classList.remove('texto-branco');
 			});
 
 			document.querySelectorAll('tr').forEach(tr =>{
