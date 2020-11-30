@@ -12,22 +12,6 @@ function principal(){
 	dadosFilmes('https://cors-anywhere.herokuapp.com/https://www.adorocinema.com/filmes/filme-41245/','https://cors-anywhere.herokuapp.com/https://www.adorocinema.com/filmes/filme-41245/fotos/detalhe/?cmediafile=20230712','titulo5','foto5');
 	//*FILME 6
 	dadosFilmes('https://cors-anywhere.herokuapp.com/https://www.adorocinema.com/filmes/filme-196666/','https://cors-anywhere.herokuapp.com/https://www.adorocinema.com/filmes/filme-196666/fotos/detalhe/?cmediafile=21047331','titulo6','foto6');
-	//*Função para aparecer o título do filme
-	document.querySelectorAll('.card').forEach(card => {
-		card.addEventListener('mouseover', evt =>{
-			let texto = evt.target.querySelector('p');
-			texto.classList.remove('texto-invisivel');
-			texto.classList.add('texto-visivel');
-		});
-	});
-
-	document.querySelectorAll('.card').forEach(card => {
-		card.addEventListener('mouseout', evt =>{
-			let texto = evt.target.querySelector('p');
-			texto.classList.remove('texto-visivel');
-			texto.classList.add('texto-invisivel');
-		});
-	});
 	//*Chamada do Modal
 	document.querySelector('#filme1').addEventListener('click', evt =>{
 		dadosModal('https://cors-anywhere.herokuapp.com/https://www.adorocinema.com/filmes/filme-143692/','https://cors-anywhere.herokuapp.com/http://www.adorocinema.com/filmes/filme-143692/trailer-19115025/');
