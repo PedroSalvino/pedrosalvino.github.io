@@ -1,4 +1,5 @@
 function principal(){
+	//*Carregar os posters
 	//*FILME 1
 	dadosFilmes('https://cors-anywhere.herokuapp.com/https://www.adorocinema.com/filmes/filme-143692/','https://cors-anywhere.herokuapp.com/http://www.adorocinema.com/filmes/filme-143692/fotos/detalhe/?cmediafile=20028688','titulo1','foto1');
 	//*FILME 2
@@ -11,6 +12,41 @@ function principal(){
 	dadosFilmes('https://cors-anywhere.herokuapp.com/https://www.adorocinema.com/filmes/filme-41245/','https://cors-anywhere.herokuapp.com/https://www.adorocinema.com/filmes/filme-41245/fotos/detalhe/?cmediafile=20230712','titulo5','foto5');
 	//*FILME 6
 	dadosFilmes('https://cors-anywhere.herokuapp.com/https://www.adorocinema.com/filmes/filme-196666/','https://cors-anywhere.herokuapp.com/https://www.adorocinema.com/filmes/filme-196666/fotos/detalhe/?cmediafile=21047331','titulo6','foto6');
+	//*Função para aparecer o título do filme
+	document.querySelectorAll('.card').forEach(card => {
+		card.addEventListener('mouseover', evt =>{
+			let texto = evt.target.querySelector('p');
+			texto.classList.remove('texto-invisivel');
+			texto.classList.add('texto-visivel');
+		});
+	});
+
+	document.querySelectorAll('.card').forEach(card => {
+		card.addEventListener('mouseout', evt =>{
+			let texto = evt.target.querySelector('p');
+			texto.classList.remove('texto-visivel');
+			texto.classList.add('texto-invisivel');
+		});
+	});
+	//*Chamada do Modal
+	document.querySelector('#filme1').addEventListener('click', evt =>{
+		dadosModal('https://cors-anywhere.herokuapp.com/https://www.adorocinema.com/filmes/filme-143692/','https://cors-anywhere.herokuapp.com/http://www.adorocinema.com/filmes/filme-143692/trailer-19115025/');
+	});
+	document.querySelector('#filme2').addEventListener('click', evt =>{
+		dadosModal('https://cors-anywhere.herokuapp.com/https://www.adorocinema.com/filmes/filme-130440/','https://cors-anywhere.herokuapp.com/http://www.adorocinema.com/filmes/filme-130440/trailer-19315929/');
+	});
+	document.querySelector('#filme3').addEventListener('click', evt =>{
+		dadosModal('https://cors-anywhere.herokuapp.com/https://www.adorocinema.com/filmes/filme-41245/','https://cors-anywhere.herokuapp.com/http://www.adorocinema.com/filmes/filme-41245/trailer-19391565/');
+	});
+	document.querySelector('#filme4').addEventListener('click', evt =>{
+		dadosModal('https://cors-anywhere.herokuapp.com/https://www.adorocinema.com/filmes/filme-114782/','https://cors-anywhere.herokuapp.com/http://www.adorocinema.com/filmes/filme-114782/trailer-19538702/');
+	});
+	document.querySelector('#filme5').addEventListener('click', evt =>{
+		dadosModal('https://cors-anywhere.herokuapp.com/https://www.adorocinema.com/filmes/filme-232669/','https://cors-anywhere.herokuapp.com/http://www.adorocinema.com/filmes/filme-232669/trailer-19561006/');
+	});
+	document.querySelector('#filme6').addEventListener('click', evt =>{
+		dadosModal('https://cors-anywhere.herokuapp.com/https://www.adorocinema.com/filmes/filme-196666/','https://cors-anywhere.herokuapp.com/http://www.adorocinema.com/filmes/filme-196666/trailer-19502054/');
+	});
 }
 //*
 function dadosModal(url, trailer){
@@ -102,76 +138,7 @@ function dadosFilmes(urltexto, urlfoto,idtitulo,idfoto){
 		}
 	)
 }
+
 //*
 window.onload = principal;
 
-
-	//*FILME 1
-	/*
-	//*FOTO - FILME 1
-	fetch("https://cors-anywhere.herokuapp.com/http://www.adorocinema.com/filmes/filme-143692/fotos/detalhe/?cmediafile=20028688", {
-		mode: 'cors',
-		headers: {  
-            "Content-type": "application/x-www-form-urlencoded; charset=UTF-8",
-				"Access-Control-Allow-Origin":"*"
-        }
-	})
-	.then(resp => resp.text())
-	.then(x => {
-			let dom = new DOMParser();
-			let doc = dom.parseFromString(x,"text/html");
-			//*
-			//var titulo = document.querySelector("#titulo1");
-			let foto = document.querySelector("#foto1");
-			foto.src=doc.querySelector(".gallery-media").src;
-		}
-	)
-	//*FILME 2
-	fetch("https://cors-anywhere.herokuapp.com/https://www.adorocinema.com/filmes/filme-114782/",{
-		mode: 'cors',
-		headers: {  
-            "Content-type": "application/x-www-form-urlencoded; charset=UTF-8",
-				"Access-Control-Allow-Origin":"*"
-        }
-	})
-	.then(resp => resp.text())
-	.then(x => {
-			let dom = new DOMParser();
-			let doc = dom.parseFromString(x,"text/html");
-			//*
-			let titulo = document.querySelector("#titulo2");
-			//var foto = document.querySelector("#foto1");
-			titulo.innerHTML=doc.querySelector(".titlebar-title").innerHTML;
-			//foto.src=doc.querySelector(".shot-img").src;
-		}
-	)
-	//*FOTO - FILME 2
-	fetch("https://cors-anywhere.herokuapp.com/http://www.adorocinema.com/filmes/filme-114782/fotos/detalhe/?cmediafile=21154453", {
-		mode: 'cors',
-		headers: {  
-            "Content-type": "application/x-www-form-urlencoded; charset=UTF-8",
-				"Access-Control-Allow-Origin":"*"
-        }
-	})
-	.then(resp => resp.text())
-	.then(x => {
-			let dom = new DOMParser();
-			let doc = dom.parseFromString(x,"text/html");
-			//*
-			//var titulo = document.querySelector("#titulo1");
-			let foto = document.querySelector("#foto2");
-			foto.src=doc.querySelector(".gallery-media").src;
-		}
-	)
-	//FILME 3
-	//http://www.adorocinema.com/filmes/filme-130440/
-
-	//FILME 4
-	//http://www.adorocinema.com/filmes/filme-232669/
-
-	//FILME 5
-	//http://www.adorocinema.com/filmes/filme-41245/
-
-	//FILME 6
-	//http://www.adorocinema.com/filmes/filme-196666/
-	*/

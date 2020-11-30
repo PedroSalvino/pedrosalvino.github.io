@@ -5,6 +5,8 @@
 }
 a, a:hover{
 	text-decoration: none;
+	color: #a4031f;
+	font-weight: bold;
 }
 ul{
 	list-style: none;
@@ -20,34 +22,41 @@ header{
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	background-color: #444;
+	background-color: #fffbe6;
 }
 header>ul{
 	display: flex;
+	margin-right: 50px;
 }
 header>ul>li{
 	margin: 0px 5px;
 }
 
 main>.row{
-	background-color: #babaca;
-	border-top: 3px solid #ffffff33;
+	background-color: #f7efcd;
+	border-top: 3px solid #fffbe6;
 }
 
 main>div:nth-child(1){
-	height: 400px;
-	background-image: url('https://dummyimage.com/1000x1000/444/000');
-	background-repeat: no-repeat;
-	background-size: cover;
-	display: flex;
-	align-items: center;
-	border: 0;
+	/*height: 400px;*/
+	/*background-image: url('https://dummyimage.com/1000x1000/444/000');*/
+	/*background-repeat: no-repeat;*/
+	/*background-size: cover;*/
+	/*display: flex;*/
+	/*align-items: center;*/
+	/*border: 0;*/
+}
+main{
+	background-color: #f7efcd; 
 }
 
 footer{
-	background-color: #555;
+	background-color: #240b36;
 	margin: 0;
 	padding: 1px 0;
+}
+footer>p{
+	margin-top: 6px;
 }
 
 .card{
@@ -59,4 +68,25 @@ footer{
 video{
 	width: 100%;
 	height: 100%;
+}
+
+.card:hover{
+	opacity: 0.8;
+	z-index: 0;
+}
+.card-img-overlay{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.texto-invisivel{
+	color: transparent !important;
+}
+.texto-visivel{
+	color: #eee !important;
+	font-weight: bold;
+}
+
+a>img{
+	border-radius: 15px;
 }

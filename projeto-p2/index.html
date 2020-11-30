@@ -5,43 +5,69 @@
 	<!-- Link do arquivo Bootstrap -->
 	<link rel="stylesheet" href="css/bootstrap.css">
 	<link rel="stylesheet" href="css/main.css">
+	<!--  -->
 	<script src="js/jquery.min.js"></script>
 	<script src="js/bootstrap.js"></script>
 	<script src="js/main.js"></script>
 	<title>Página Inicial</title>
-	<script>
-	</script>
 </head>
 <body>
 	<header>
 		<div>
-			<a href="#"><img src="https://dummyimage.com/100x50/b01116/000" class="card-img"></a>
+			<a href="#"><img src="img/fatecindicafi.png" class="card-img" alt=""></a>
 		</div>
 		<ul>
-			<li><a href="">Início</a></li>
-			<li><a href="">Filmes</a></li>
-			<li><a href="">Sobre</a></li>
+			<li><a href="#inicio">Início</a></li>
+			<li><a href="#filmes">Filmes</a></li>
+			<li><a href="#sobre">Sobre</a></li>
 		</ul>
+		<!-- <div></div> -->
 	</header>
 	<main class="container-fluid">
-		<div class="row">
+		<div class="row" id="inicio">
 			<div class="col-md-12">
-				<h1 class="text-center text-white">NOME DO PROJETO</h1>
+				<!-- <h1 class="text-center text-white">NOME DO PROJETO</h1> -->
+				<div id="carrossel" class="carousel slide" data-ride="carousel">
+				  <ol class="carousel-indicators">
+				    <li data-target="#carrossel" data-slide-to="0" class="active"></li>
+				    <li data-target="#carrossel" data-slide-to="1"></li>
+				    <li data-target="#carrossel" data-slide-to="2"></li>
+				  </ol>
+				  <div class="carousel-inner">
+				    <div class="carousel-item active">
+				      <img src="img/BANNER3.png" class="d-block w-100" alt="...">
+				    </div>
+				    <div class="carousel-item">
+				      <img src="img/BANNER1.png" class="d-block w-100" alt="...">
+				    </div>
+				    <div class="carousel-item">
+				      <img src="img/BANNER2.png" class="d-block w-100" alt="...">
+				    </div>
+				  </div>
+				  <a class="carousel-control-prev" href="#carrossel" role="button" data-slide="prev">
+				    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+				    <span class="sr-only">Anterior</span>
+				  </a>
+				  <a class="carousel-control-next" href="#carrossel" role="button" data-slide="next">
+				    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+				    <span class="sr-only">Próximo</span>
+				  </a>
+				</div>
 			</div>
 		</div>
-		<div class="row py-5">
+		<div class="row py-5" id="filmes">
 			<section class="col-md-10 mx-auto">
 				<h2>Filmes</h2>
 				<!-- Primeira Linha -->
 				<div class="row">
 					<div class="col">
 						<!-- Filme 1 -->
-						<a href="#" data-toggle="modal" data-target="#filmeModal" id="filme1" onclick="dadosModal('https://cors-anywhere.herokuapp.com/https://www.adorocinema.com/filmes/filme-143692/','https://cors-anywhere.herokuapp.com/http://www.adorocinema.com/filmes/filme-143692/trailer-19115025/');">
+						<a href="#" data-toggle="modal" data-target="#filmeModal" id="filme1">
 							<div class="card bg-dark">
 								<img src="https://dummyimage.com/600x400/b01116/000" class="card-img" id="foto1">
 								<div class="card-img-overlay">
 									<br>
-									<p class="card-title text-white text-center" id="titulo1"></p>
+									<p class="card-title texto-invisivel text-white text-center" id="titulo1"></p>
 								</div>
 							</div>
 						</a>
@@ -49,27 +75,27 @@
 					<!--  -->
 					<div class="col">
 						<!-- Filme 2 -->
-						<a href="#" data-toggle="modal" data-target="#filmeModal" id="filme2" onclick="dadosModal('https://cors-anywhere.herokuapp.com/https://www.adorocinema.com/filmes/filme-114782/','https://cors-anywhere.herokuapp.com/http://www.adorocinema.com/filmes/filme-114782/trailer-19538702/');">
+						<a href="#" data-toggle="modal" data-target="#filmeModal" id="filme2">
 							<div class="card bg-dark">
-								<img src="https://dummyimage.com/600x400/b01116/000" class="card-img" id="foto2">
+								<img src="https://dummyimage.com/600x400/b01116/000" class="card-img" id="foto3">
 								<div class="card-img-overlay">
 									<br>
-									<p class="card-title text-white text-center" id="titulo2"></p>
+									<p class="card-title texto-invisivel text-white text-center" id="titulo3"></p>
 								</div>
-							</div>
+							</div>	
 						</a>
 					</div>
 					<!--  -->
 					<div class="col">
 						<!-- Filme 3 -->
-						<a href="#" data-toggle="modal" data-target="#filmeModal" id="filme3" onclick="dadosModal('https://cors-anywhere.herokuapp.com/https://www.adorocinema.com/filmes/filme-130440/','https://cors-anywhere.herokuapp.com/http://www.adorocinema.com/filmes/filme-130440/trailer-19315929/');">
+						<a href="#" data-toggle="modal" data-target="#filmeModal" id="filme3">
 							<div class="card bg-dark">
-								<img src="https://dummyimage.com/600x400/b01116/000" class="card-img" id="foto3">
+								<img src="https://dummyimage.com/600x400/b01116/000" class="card-img" id="foto5">
 								<div class="card-img-overlay">
 									<br>
-									<p class="card-title text-white text-center" id="titulo3"></p>
+									<p class="card-title texto-invisivel text-white text-center" id="titulo5"></p>
 								</div>
-							</div>	
+							</div>
 						</a>
 					</div>
 				</div>
@@ -78,12 +104,12 @@
 				<div class="row">
 					<div class="col">
 						<!-- Filme 4 -->
-						<a href="#" data-toggle="modal" data-target="#filmeModal" id="filme4" onclick="dadosModal('https://cors-anywhere.herokuapp.com/https://www.adorocinema.com/filmes/filme-232669/','https://cors-anywhere.herokuapp.com/http://www.adorocinema.com/filmes/filme-232669/trailer-19561006/');">
+						<a href="#" data-toggle="modal" data-target="#filmeModal" id="filme4">
 							<div class="card bg-dark">
-								<img src="https://dummyimage.com/600x400/b01116/000" class="card-img" id="foto4">
+								<img src="https://dummyimage.com/600x400/b01116/000" class="card-img" id="foto2">
 								<div class="card-img-overlay">
 									<br>
-									<p class="card-title text-white text-center" id="titulo4"></p>
+									<p class="card-title texto-invisivel text-white text-center" id="titulo2"></p>
 								</div>
 							</div>
 						</a>
@@ -91,12 +117,12 @@
 					<!--  -->
 					<div class="col">
 						<!-- Filme 5 -->
-						<a href="#" data-toggle="modal" data-target="#filmeModal" id="filme5" onclick="dadosModal('https://cors-anywhere.herokuapp.com/https://www.adorocinema.com/filmes/filme-41245/','https://cors-anywhere.herokuapp.com/http://www.adorocinema.com/filmes/filme-41245/trailer-19391565/');">
+						<a href="#" data-toggle="modal" data-target="#filmeModal" id="filme5">
 							<div class="card bg-dark">
-								<img src="https://dummyimage.com/600x400/b01116/000" class="card-img" id="foto5">
+								<img src="https://dummyimage.com/600x400/b01116/000" class="card-img" id="foto4">
 								<div class="card-img-overlay">
 									<br>
-									<p class="card-title text-white text-center" id="titulo5"></p>
+									<p class="card-title texto-invisivel text-white text-center" id="titulo4"></p>
 								</div>
 							</div>
 						</a>
@@ -104,12 +130,12 @@
 					<!--  -->
 					<div class="col">
 						<!-- Filme 6 -->
-						<a href="#" data-toggle="modal" data-target="#filmeModal" id="filme6" onclick="dadosModal('https://cors-anywhere.herokuapp.com/https://www.adorocinema.com/filmes/filme-196666/','https://cors-anywhere.herokuapp.com/http://www.adorocinema.com/filmes/filme-196666/trailer-19502054/');">
+						<a href="#" data-toggle="modal" data-target="#filmeModal" id="filme6">
 							<div class="card bg-dark">
 								<img src="https://dummyimage.com/600x400/b01116/000" class="card-img" id="foto6">
 								<div class="card-img-overlay">
 									<br>
-									<p class="card-title text-white text-center" id="titulo6"></p>
+									<p class="card-title texto-invisivel text-white text-center" id="titulo6"></p>
 								</div>
 							</div>
 						</a>
@@ -117,7 +143,7 @@
 				</div>
 			</section>
 		</div>
-		<div class="row py-5">
+		<div class="row py-5" id="sobre">
 			<div class="col-md-10 mx-auto">
 				<h2>Sobre</h2>
 				<div class="row">
@@ -127,16 +153,22 @@
 					<div class="col-md-6">
 						<div class="row">
 							<div class="col">
-								<img src="https://dummyimage.com/500x500/b01116/000">
-								<p>Nome do Dev</p>
+								<a href="https://linktr.ee/kateodoros">
+									<img src="img/karoline.png" alt="">
+									<p class="text-center">Karoline<br>Teodoro</p>
+								</a>
 							</div>
 							<div class="col">
-								<img src="https://dummyimage.com/500x500/b01116/000">
-								<p>Nome do Dev</p>
+								<a href="https://linktr.ee/pedrosalvino">
+									<img src="img/pedro.jpg" alt="">
+									<p class="text-center">Pedro<br>Salvino</p>
+								</a>
 							</div>
 							<div class="col">
-								<img src="https://dummyimage.com/500x500/b01116/000">
-								<p>Nome do Dev</p>
+								<a href="https://linktr.ee/wesley23">
+									<img src="img/wesley.png" alt="">
+									<p class="text-center">Wesley<br>Nascimento</p>	
+								</a>
 							</div>
 						</div>
 					</div>
@@ -145,7 +177,7 @@
 		</div>
 	</main>
 	<footer>
-		<p class="text-center text-white">Desenvolvido por &copy; WPK</p>
+		<p class="text-center text-white">Desenvolvido por &copy; <a href="https://linktr.ee/equipewpk">WPK</a></p>
 	</footer>
 
 	<!-- MODAL -->
@@ -165,16 +197,16 @@
 		      				<div class="col-md-6">
 		      					<fieldset>
 		      						<legend>Dados gerais</legend>
-		      						<p class="h4" id="diretorfilme">
+		      						<p class="h6" id="diretorfilme">
 		      						
 		      						</p>
-		      						<p class="h4" id="elencofilme">
+		      						<p class="h6" id="elencofilme">
 		      						
 		      						</p>
-		      						<p class="h4" id="anofilme">
+		      						<p class="h6" id="anofilme">
 		      						
 		      						</p>
-		      						<p class="h4" id="duracaofilme">
+		      						<p class="h6" id="duracaofilme">
 		      						
 		      						</p>
 		      					</fieldset>
